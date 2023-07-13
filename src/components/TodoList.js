@@ -16,7 +16,9 @@ const TodoList = () => {
   };
 
   const handleRemoveTodo = (index) => {
-    setTodos((prevTodos) => prevTodos.filter((_, i) => i !== index));
+    setTodos((prevTodos) =>
+      prevTodos.filter((_, todoIndex) => todoIndex !== index)
+    );
   };
 
   return (
